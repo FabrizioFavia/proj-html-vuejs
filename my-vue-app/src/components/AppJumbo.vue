@@ -82,6 +82,10 @@ export default {
         background-color: $accentColor;
         border-radius: 20px;
         padding: 0.5em 1em;
+
+        &:hover {
+            background-color: green;
+        }
     }
 }
 </style>
