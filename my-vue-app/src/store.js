@@ -1,9 +1,11 @@
+import { Dropdown } from "bootstrap";
 import { reactive } from "vue"
 
 
 export const store = reactive({
 
     filter: null,
+    currentSlide: 0,
 
     movies: [
         {
@@ -60,13 +62,154 @@ export const store = reactive({
 
     slides: [
         {
-            urlPath: "../assets/slider-1536x520.jpg",
+            urlPath: "/src/assets/slider-1536x520.jpg",
         },
         {
-            urlPath: "../assets/slider-2-1536x520.jpg",
+            urlPath: "/src/assets/slider-2-1536x520.jpg",
         }
     ],
 
-    navItems: ["Home", "Celebrity", "Movie", "Page", "Shop"]
+    navItems: [
+        {
+            label: "Home",
+            link: null,
+            subMenu: [
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: true,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: true,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                }
+            ]
+        },
+        {
+            label: "Celebrity",
+            link: null,
+            subMenu: [
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                }
+            ]
+        },
+        {
+            label: "Movie",
+            link: null,
+            subMenu: [
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                }
+            ]
+        },
+        {
+            label: "Page",
+            link: null,
+            subMenu: [
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                }
+            ]
+        },
+        {
+            label: "Shop",
+            link: null,
+            subMenu: [
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                },
+                {
+                    label: "lorem",
+                    link: "#",
+                    disable: false,
+                }
+            ]
+        },
+        {
+            label: "Blog",
+            link: "#",
+            subMenu: []
+        },
+        {
+            label: "About us",
+            link: "#",
+            subMenu: []
+        }
+    ]
 
 });

@@ -1,19 +1,37 @@
 <script>
+
+import { store } from '../store'
+
 export default {
-    name: "AppJumbo"
+    name: "AppJumbo",
+
+    data() {
+        return {
+            store
+        }
+    }
 }
 </script>
 
 <template>
-    <div>
-        <h2>Jumbotron section</h2>
+    <div class="JumboContainer">
+        <template v-for="(slide, i) in store.slides">
+            <img class="slide" v-show="i == store.currentSlide" :src="slide.urlPath" alt="">
+        </template>
+
+
     </div>
 </template>
 
 <style lang="scss" scoped>
 @use "../main.scss" as *;
 
-h2 {
-    color: $secondaryColor;
+.JumboContainer {
+    height: 710px;
+    border-bottom: 1px solid $borderColor;
+
+    .slide {
+        height: 100%;
+    }
 }
 </style>

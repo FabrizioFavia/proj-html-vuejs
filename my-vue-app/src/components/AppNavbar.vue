@@ -18,9 +18,12 @@ export default {
     <div class="navBar">
         <div class="container-lg d-flex justify-content-between align-items-center h-100">
             <div class="listContainer d-flex">
-                <ul class="d-flex align-items-center" v-for="item in store.navItems">
-                    <li class="text-white ">{{ item }}</li>
-                    <i class="fa-solid fa-caret-down text-white me-3 ms-1"></i>
+                <ul class="d-flex align-items-center">
+                    <template v-for="item in store.navItems">
+                        <li class="text-white ms-3">{{ item.label }}</li>
+                        <i v-if="item.subMenu.length" class="fa-solid fa-caret-down ms-1"></i>
+                    </template>
+
                 </ul>
             </div>
             <div class="cartContainer">
@@ -40,6 +43,13 @@ export default {
 
     ul {
         list-style-type: none;
+
+        li,
+        i {
+            color: white;
+        }
+
+
     }
 }
 

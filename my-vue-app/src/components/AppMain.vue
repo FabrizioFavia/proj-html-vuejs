@@ -21,7 +21,7 @@ export default {
 
 <template>
     <main>
-        <h2>main section</h2>
+
 
         <AppJumbo />
         <AppNewMovies />
