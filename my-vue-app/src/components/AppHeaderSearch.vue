@@ -9,13 +9,34 @@ export default {
 
 
 <template>
-    <h1>AppHeaderSearch</h1>
+    <div class="input-group mb-3">
+        <input type="text" class="form-control" placeholder="Search" aria-label="Recipient's username"
+            aria-describedby="basic-addon2">
+        <span class="input-group-text text-white" id="basic-addon2">Search</span>
+    </div>
 </template>
 
 <style lang="scss" scoped>
 @use "../main.scss" as *;
 
-h1 {
-    color: $secondaryColor;
+input {
+    border-radius: 0%;
+    background-color: $primaryColor;
+    border-top: 0.5px solid $borderColor;
+    border-bottom: 0.5px solid $borderColor;
+    border-left: 0;
+    border-right: 0;
+    font-size: 10px;
+    padding: 1em;
+    width: 200px !important;
+}
+
+.input-group-text {
+    background-color: $accentColor;
+    border-radius: 0%;
+    border: 0;
+    font-size: 10px;
+    padding: 1em 2.5em;
+
 }
 </style>
