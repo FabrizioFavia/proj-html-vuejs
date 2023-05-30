@@ -30,5 +30,6 @@ export default {
 .bottomHeader {
     height: 122px;
     border-bottom: 2px solid $borderColor;
+    background-color: $primaryColor;
 }
 </style>

@@ -40,4 +40,8 @@ export default {
 h2 {
     color: $secondaryColor;
 }
+
+main {
+    background-color: $primaryColor;
+}
 </style>

@@ -75,22 +75,22 @@ export const store = reactive({
             link: null,
             subMenu: [
                 {
-                    label: "lorem",
+                    label: "lorem 1",
                     link: "#",
                     disable: true,
                 },
                 {
-                    label: "lorem",
+                    label: "lorem 2",
                     link: "#",
                     disable: false,
                 },
                 {
-                    label: "lorem",
+                    label: "lorem 3",
                     link: "#",
                     disable: true,
                 },
                 {
-                    label: "lorem",
+                    label: "lorem 4",
                     link: "#",
                     disable: false,
                 }
@@ -101,25 +101,20 @@ export const store = reactive({
             link: null,
             subMenu: [
                 {
-                    label: "lorem",
+                    label: "lorem 5",
                     link: "#",
                     disable: false,
                 },
                 {
-                    label: "lorem",
+                    label: "lorem 6",
                     link: "#",
                     disable: false,
                 },
                 {
-                    label: "lorem",
+                    label: "lorem 7",
                     link: "#",
                     disable: false,
                 },
-                {
-                    label: "lorem",
-                    link: "#",
-                    disable: false,
-                }
             ]
         },
         {
@@ -136,16 +131,6 @@ export const store = reactive({
                     link: "#",
                     disable: false,
                 },
-                {
-                    label: "lorem",
-                    link: "#",
-                    disable: false,
-                },
-                {
-                    label: "lorem",
-                    link: "#",
-                    disable: false,
-                }
             ]
         },
         {
@@ -157,21 +142,6 @@ export const store = reactive({
                     link: "#",
                     disable: false,
                 },
-                {
-                    label: "lorem",
-                    link: "#",
-                    disable: false,
-                },
-                {
-                    label: "lorem",
-                    link: "#",
-                    disable: false,
-                },
-                {
-                    label: "lorem",
-                    link: "#",
-                    disable: false,
-                }
             ]
         },
         {
@@ -179,25 +149,20 @@ export const store = reactive({
             link: null,
             subMenu: [
                 {
-                    label: "lorem",
+                    label: "lorem 5",
                     link: "#",
                     disable: false,
                 },
                 {
-                    label: "lorem",
+                    label: "lorem 4",
                     link: "#",
                     disable: false,
                 },
                 {
-                    label: "lorem",
+                    label: "lorem 7",
                     link: "#",
                     disable: false,
                 },
-                {
-                    label: "lorem",
-                    link: "#",
-                    disable: false,
-                }
             ]
         },
         {

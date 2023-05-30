@@ -20,8 +20,21 @@ export default {
             <div class="listContainer d-flex">
                 <ul class="d-flex align-items-center">
                     <template v-for="item in store.navItems">
-                        <li class="text-white ms-3">{{ item.label }}</li>
-                        <i v-if="item.subMenu.length" class="fa-solid fa-caret-down ms-1"></i>
+                        <div v-if="item.subMenu.length" class="dropdown me-3">
+                            <a class="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                {{ item.label }}
+                            </a>
+
+                            <ul class="dropdown-menu p-0">
+                                <li v-for="link in item.subMenu">
+                                    <a :class="link.disable == true ? 'disabled disabledLink' : ' '"
+                                        class="dropdown-item subItem" :href="link.link">{{
+                                            link.label }}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="me-3" v-else><a :href="item.link">{{ item.label }}</a></div>
                     </template>
 
                 </ul>
@@ -39,14 +52,24 @@ export default {
 
 .navBar {
     height: 75px;
-    border-bottom: 2px solid $borderColor;
+    background-color: $primaryColor;
+
+    .subItem:hover {
+        color: $tertiaryColor;
+    }
 
     ul {
         list-style-type: none;
+        background-color: $primaryColor;
 
-        li,
-        i {
+        a {
+            text-decoration: auto;
             color: white;
+
+        }
+
+        .disabledLink {
+            color: gray;
         }
 
 
