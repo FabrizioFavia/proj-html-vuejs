@@ -1,21 +1,19 @@
 <script>
 
-
 export default {
-    name: "AppHeaderSearch",
-
+    name: "AppNavbar"
 }
+
 </script>
 
-
 <template>
-    <h1>AppHeaderSearch</h1>
+    <h2>Navbar</h2>
 </template>
 
 <style lang="scss" scoped>
 @use "../main.scss" as *;
 
-h1 {
+h2 {
     color: $secondaryColor;
 }
 </style>

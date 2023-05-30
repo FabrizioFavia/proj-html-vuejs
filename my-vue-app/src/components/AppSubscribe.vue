@@ -1,15 +1,14 @@
 <script>
 
-
 export default {
-    name: "AppHeaderSearch",
+    name: "AppSubscribe",
 
 }
 </script>
 
 
 <template>
-    <h1>AppHeaderSearch</h1>
+    <h1>Subscribe section</h1>
 </template>
 
 <style lang="scss" scoped>

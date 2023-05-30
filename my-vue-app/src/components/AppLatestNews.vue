@@ -1,15 +1,14 @@
 <script>
 
-
 export default {
-    name: "AppHeaderSearch",
+    name: "AppLatestNews",
 
 }
 </script>
 
 
 <template>
-    <h1>AppHeaderSearch</h1>
+    <h1>Latest News</h1>
 </template>
 
 <style lang="scss" scoped>

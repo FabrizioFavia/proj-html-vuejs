@@ -1,17 +1,15 @@
 <script>
-
-
 export default {
-    name: "AppHeaderSearch",
+    name: "AppMoviePlaylist",
 
 }
 </script>
-
-
+  
+  
 <template>
-    <h1>AppHeaderSearch</h1>
+    <h1>Playlist section</h1>
 </template>
-
+  
 <style lang="scss" scoped>
 @use "../main.scss" as *;
 
@@ -19,3 +17,4 @@ h1 {
     color: $secondaryColor;
 }
 </style>
+  

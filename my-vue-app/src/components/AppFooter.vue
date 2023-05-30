@@ -2,14 +2,14 @@
 
 
 export default {
-    name: "AppHeaderSearch",
+    name: "AppFooter",
 
 }
 </script>
 
 
 <template>
-    <h1>AppHeaderSearch</h1>
+    <h1>Footer</h1>
 </template>
 
 <style lang="scss" scoped>
