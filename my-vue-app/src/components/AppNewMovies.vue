@@ -56,12 +56,8 @@ export default {
                         <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
                         <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
                         <div class="tags d-flex justify-content-between">
-                            <div class="ps-420px 
-                                                                                        pmt-4 left">Details</div>
-                            <div class="pe-420px 
-                                                                                        pmt-4 right">{{ movie.views }}
-                                Views
-                            </div>
+                            <div class="left">Details</div>
+                            <div class="right">{{ movie.views }}Views</div>
                         </div>
                     </div>
                 </template>
@@ -74,12 +70,8 @@ export default {
                         <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
                         <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
                         <div class="tags d-flex justify-content-between">
-                            <div class="ps-420px 
-                                                                                        pmt-4 left">Details</div>
-                            <div class="pe-420px 
-                                                                                        pmt-4 right">{{ movie.views }}
-                                Views
-                            </div>
+                            <div class="left">Details</div>
+                            <div class="right">{{ movie.views }}Views</div>
                         </div>
                     </div>
                 </template>
@@ -92,12 +84,8 @@ export default {
                         <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
                         <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
                         <div class="tags d-flex justify-content-between">
-                            <div class="ps-420px 
-                                                                                        pmt-4 left">Details</div>
-                            <div class="pe-420px 
-                                                                                        pmt-4 right">{{ movie.views }}
-                                Views
-                            </div>
+                            <div class="left">Details</div>
+                            <div class="right">{{ movie.views }}Views</div>
                         </div>
                     </div>
                 </template>
@@ -194,4 +182,5 @@ export default {
             border-bottom-left-radius: 20px;
         }
     }
-}</style>
+}
+</style>
