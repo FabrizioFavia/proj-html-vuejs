@@ -5,6 +5,7 @@ import AppMoviePlaylist from './AppMoviePlaylist.vue';
 import AppFilterSection from './AppFilterSection.vue';
 import AppLatestNews from './AppLatestNews.vue'
 import AppSubscribe from './AppSubscribe.vue'
+import AppFixedJumbo from './AppFixedJumbo.vue'
 
 export default {
     name: "AppMain",
@@ -12,6 +13,7 @@ export default {
         AppJumbo,
         AppNewMovies,
         AppMoviePlaylist,
+        AppFixedJumbo,
         AppFilterSection,
         AppLatestNews,
         AppSubscribe
@@ -26,6 +28,7 @@ export default {
         <AppJumbo />
         <AppNewMovies />
         <AppMoviePlaylist />
+        <AppFixedJumbo />
         <AppFilterSection />
         <AppLatestNews />
         <AppSubscribe />

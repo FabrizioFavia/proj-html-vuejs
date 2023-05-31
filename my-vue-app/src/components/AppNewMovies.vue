@@ -36,8 +36,7 @@ export default {
         <div class="row dscrptContainer w-100">
             <div class="col-11 ps-4 pb-2 sectionDscrpt text-white">
                 <h3>New Movies</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    deleniti. </p>
+                <p>Discover our new horror movies, if you dare. </p>
             </div>
             <div class=" col-1 d-flex align-items-center btnContainer">
                 <i @click="previousCard()" class="fa-solid fa-circle-chevron-right reversed"></i>

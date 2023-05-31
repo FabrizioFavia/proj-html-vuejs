@@ -18,8 +18,7 @@ export default {
         <div class="row dscrptContainer w-100">
             <div class="col-12 ps-4 pb-2 sectionDscrpt text-white">
                 <h3>Movie Playlist</h3>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    deleniti. </p>
+                <p>For you a playlist of the user's most beloved movies. </p>
             </div>
         </div>
     </div>
