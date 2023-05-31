@@ -13,6 +13,7 @@ export const store = reactive({
             category: "coming soon",
             rate: "0/10",
             views: 666,
+            smUrlPath: "src/assets/1-234x300.jpg",
             xlUrlPath: "src/assets/1.jpg",
         },
         {
@@ -30,10 +31,10 @@ export const store = reactive({
             category: "Latest Movie",
             rate: "0/10",
             views: 322,
-            smUrlPath: "/src/assets/blog2-100x100.jpg",
-            mdUrlPath: "/src/assets/blog2-150x150.jpg",
-            lgUrlPath: "/src/assets/blog2-300x300.jpg",
-            xlUrlPath: "/src/assets/blog2-570x570.jpg",
+            smUrlPath: "/src/assets/5-100x100.jpg",
+            mdUrlPath: "/src/assets/5-150x150.jpg",
+            lgUrlPath: "/src/assets/5-238x300.jpg",
+            xlUrlPath: "/src/assets/5.jpg",
         },
         {
             title: "alalalalal",

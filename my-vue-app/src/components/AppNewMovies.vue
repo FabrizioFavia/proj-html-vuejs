@@ -2,7 +2,7 @@
 import { store } from '../store'
 
 export default {
-    name: "AppNewMovies",
+    name: " ",
     data() {
         return {
             store,
@@ -44,8 +44,8 @@ export default {
                 <i @click="nextCard()" class="fa-solid fa-circle-chevron-right"></i>
             </div>
         </div>
-        <!-- CARD SLIDER -->
     </div>
+    <!-- CARD SLIDER -->
     <div class="container-lg">
         <div class="cardSlider row w-100 d-flex align-items-center">
 
@@ -57,7 +57,7 @@ export default {
                         <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
                         <div class="tags d-flex justify-content-between">
                             <div class="left">Details</div>
-                            <div class="right">{{ movie.views }}Views</div>
+                            <div class="right">{{ movie.views }} Views</div>
                         </div>
                     </div>
                 </template>
@@ -71,7 +71,7 @@ export default {
                         <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
                         <div class="tags d-flex justify-content-between">
                             <div class="left">Details</div>
-                            <div class="right">{{ movie.views }}Views</div>
+                            <div class="right">{{ movie.views }} Views</div>
                         </div>
                     </div>
                 </template>
@@ -85,7 +85,7 @@ export default {
                         <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
                         <div class="tags d-flex justify-content-between">
                             <div class="left">Details</div>
-                            <div class="right">{{ movie.views }}Views</div>
+                            <div class="right">{{ movie.views }} Views</div>
                         </div>
                     </div>
                 </template>
@@ -128,6 +128,8 @@ export default {
             border-radius: 20px;
             padding: 0;
             position: relative;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
 
             .centerImg {
                 width: 100%;
@@ -144,6 +146,8 @@ export default {
             border-radius: 20px;
             padding: 0;
             position: relative;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
 
             .sideImg {
                 width: 100%;
@@ -151,6 +155,7 @@ export default {
                 object-fit: cover;
                 border-radius: 20px;
                 filter: saturate(60%);
+
             }
         }
     }

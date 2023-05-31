@@ -44,7 +44,7 @@ export default {
 .headerTop {
   height: 55px;
   border-bottom: 2px solid $borderColor;
-  background-color: $primaryColor;
+  background-color: $tertiaryColor;
 
 
   .navText {

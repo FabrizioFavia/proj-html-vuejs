@@ -52,7 +52,7 @@ export default {
 
 .navBar {
     height: 75px;
-    background-color: $primaryColor;
+    background-color: $tertiaryColor;
 
     .subItem:hover {
         color: $tertiaryColor;
@@ -60,7 +60,7 @@ export default {
 
     ul {
         list-style-type: none;
-        background-color: $primaryColor;
+        background-color: $tertiaryColor;
 
         a {
             text-decoration: auto;

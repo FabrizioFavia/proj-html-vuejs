@@ -42,6 +42,6 @@ h2 {
 }
 
 main {
-    background-color: $primaryColor;
+    background-color: $tertiaryColor;
 }
 </style>
