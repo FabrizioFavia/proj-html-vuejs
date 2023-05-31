@@ -9,7 +9,8 @@ export const store = reactive({
 
     movies: [
         {
-            title: "alalalalal",
+            title: "Curse of the Hell 3",
+            director: "Ayrton Rosario",
             category: "coming soon",
             rate: "0/10",
             views: 666,
@@ -17,7 +18,8 @@ export const store = reactive({
             xlUrlPath: "src/assets/1.jpg",
         },
         {
-            title: "alalalalal",
+            title: "The Chainsaw Slayers 5",
+            director: "Chaya Reed",
             category: "coming soon",
             rate: "0/10",
             views: 666,
@@ -27,7 +29,8 @@ export const store = reactive({
             xlUrlPath: "src/assets/2-1-216x300.jpg",
         },
         {
-            title: "alalalalal",
+            title: "The Crazy Snatcher 7",
+            director: "Siobhan Johnson",
             category: "Latest Movie",
             rate: "0/10",
             views: 322,
@@ -37,7 +40,8 @@ export const store = reactive({
             xlUrlPath: "/src/assets/5.jpg",
         },
         {
-            title: "alalalalal",
+            title: "Saw Killer In Space",
+            director: "Rahul Frye",
             category: "Top Rating",
             rate: "0/10",
             views: 488,
@@ -47,7 +51,8 @@ export const store = reactive({
             xlUrlPath: "/src/assets/blog3-570x570.jpg",
         },
         {
-            title: "alalalalal",
+            title: "Scream Massacre Part: II",
+            director: "Claudia Nash",
             category: "TV Series",
             rate: "0/10",
             views: 563,
@@ -57,7 +62,8 @@ export const store = reactive({
             xlUrlPath: "/src/assets/blog4-570x570.jpg",
         },
         {
-            title: "alalalalal",
+            title: "Unusual Killings Part: VI",
+            director: "Kayleigh Chen",
             category: "Coming soon",
             rate: "0/10",
             views: 768,
@@ -67,7 +73,8 @@ export const store = reactive({
             xlUrlPath: "/src/assets/blog-570x570.jpg",
         },
         {
-            title: "alalalalal",
+            title: "Saw Camp Part: IX",
+            director: "May Stuart",
             category: "coming soon",
             rate: "0/10",
             views: 666,
@@ -77,7 +84,8 @@ export const store = reactive({
             xlUrlPath: "src/assets/2-1-300x300 (1).jpg",
         },
         {
-            title: "alalalalal",
+            title: "The Blood Face 3",
+            director: "Kallum Lang",
             category: "coming soon",
             rate: "0/10",
             views: 666,
