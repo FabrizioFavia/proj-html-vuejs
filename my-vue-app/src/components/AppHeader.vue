@@ -1,6 +1,6 @@
 <script>
-import AppBottomHeader from './AppBottomHeader.vue';
-import AppNavbar from './AppNavbar.vue';
+import AppBottomHeader from '../components/AppBottomHeader.vue';
+import AppNavbar from '../components/AppNavbar.vue';
 
 export default {
   name: "AppHeader",

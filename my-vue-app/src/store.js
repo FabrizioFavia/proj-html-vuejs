@@ -11,7 +11,7 @@ export const store = reactive({
         {
             title: "Curse of the Hell 3",
             director: "Ayrton Rosario",
-            category: "coming soon",
+            category: ["Coming Soon", "Top Rating"],
             rate: "0/10",
             views: 666,
             smUrlPath: "src/assets/1-234x300.jpg",
@@ -20,7 +20,7 @@ export const store = reactive({
         {
             title: "The Chainsaw Slayers 5",
             director: "Chaya Reed",
-            category: "coming soon",
+            category: ["Tv Series", "Top Rating"],
             rate: "0/10",
             views: 666,
             smUrlPath: "src/assets/2-1-100x100.jpg",
@@ -31,7 +31,7 @@ export const store = reactive({
         {
             title: "The Crazy Snatcher 7",
             director: "Siobhan Johnson",
-            category: "Latest Movie",
+            category: ["Latest Movie"],
             rate: "0/10",
             views: 322,
             smUrlPath: "/src/assets/5-100x100.jpg",
@@ -42,7 +42,7 @@ export const store = reactive({
         {
             title: "Saw Killer In Space",
             director: "Rahul Frye",
-            category: "Top Rating",
+            category: ["Top Rating", "Tv Series"],
             rate: "0/10",
             views: 488,
             smUrlPath: "/src/assets/blog3-100x100.jpg",
@@ -53,7 +53,7 @@ export const store = reactive({
         {
             title: "Scream Massacre Part: II",
             director: "Claudia Nash",
-            category: "TV Series",
+            category: ["TV Series", "Latest Movie"],
             rate: "0/10",
             views: 563,
             smUrlPath: "/src/assets/blog4-100x100.jpg",
@@ -64,7 +64,7 @@ export const store = reactive({
         {
             title: "Unusual Killings Part: VI",
             director: "Kayleigh Chen",
-            category: "Coming soon",
+            category: ["Coming Soon"],
             rate: "0/10",
             views: 768,
             smUrlPath: "/src/assets/blog-100x100.jpg",
@@ -75,7 +75,7 @@ export const store = reactive({
         {
             title: "Saw Camp Part: IX",
             director: "May Stuart",
-            category: "coming soon",
+            category: ["Coming Soon", "Top Rating"],
             rate: "0/10",
             views: 666,
             smUrlPath: "src/assets/2-1-150x150 (1).jpg",
@@ -86,7 +86,7 @@ export const store = reactive({
         {
             title: "The Blood Face 3",
             director: "Kallum Lang",
-            category: "coming soon",
+            category: ["Coming Soon", "Latest Movie"],
             rate: "0/10",
             views: 666,
             smUrlPath: "/src/assets/blog5-100x100.jpg",
@@ -212,6 +212,29 @@ export const store = reactive({
             link: "#",
             subMenu: []
         }
-    ]
+    ],
 
+    categories: [
+        {
+            name: "All",
+            clicked: true
+        },
+        {
+            name: "Coming Soon",
+            clicked: false
+        },
+        {
+            name: "Latest Movie",
+            clicked: false
+        },
+        {
+            name: "Top Rating",
+            clicked: false
+        },
+        {
+            name: "Tv Series",
+            clicked: false
+        },
+
+    ]
 });

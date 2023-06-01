@@ -13,18 +13,12 @@ export default {
         nextCard() {
             if (this.currentCard <= this.store.movies.length - 4) {
                 this.currentCard++;
-            } else {
-                this.currentCard = 0;
             }
         },
         previousCard() {
-            if (this.currentCard == 0) {
-                this.currentCard = this.store.navItems.length - 2;
-            } else {
+            if (this.currentCard > 0) {
                 this.currentCard--;
             }
-
-
         },
     }
 }
