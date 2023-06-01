@@ -15,9 +15,7 @@ export default {
             store.categories.map(category =>
                 category.clicked = false
             );
-
             this.store.categories[this.clickedCategory].clicked = true;
-
             this.store.filter = category.name == "All" ? null : category.name;
         },
         movieFiltered() {
@@ -25,10 +23,7 @@ export default {
             if (this.store.filter) {
                 return this.store.movies.filter(element => element.category.includes(this.store.filter))
             }
-
             return this.store.movies
-
-
         }
     }
 }
@@ -56,16 +51,17 @@ export default {
             <template v-for="movie in movieFiltered()">
                 <div class="movieCard text-white">
                     <img :src="movie.xlUrlPath" alt="">
-                    <div class="cardDscrpt">
-                        <p>{{ movie.title }}</p>
-                        <p>Category: {{ movie.category.toString() }}</p>
-                        <p>{{ movie.views }} views</p>
+                    <div class="cardDscrpt text-white">
+                        <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
+                        <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
+                        <div class="tags d-flex justify-content-between">
+                            <div class="left">Details</div>
+                            <div class="right">{{ movie.views }} Views</div>
+                        </div>
                     </div>
 
                 </div>
             </template>
-
-
         </div>
     </div>
 </template>
@@ -106,19 +102,37 @@ ul {
 
     .cardDscrpt {
         position: absolute;
-        top: 0;
+        bottom: 0;
+        width: 100%;
+        font-weight: 600;
+    }
 
+    .tags {
 
+        div {
+            background-color: $primaryColor;
+            margin-bottom: 20px;
+            padding: 12px 20px;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+
+        .left {
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+
+        .right {
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
     }
 
     img {
         width: 100%;
         height: 100%;
-        filter: brightness(0.8);
+        filter: brightness(50%);
     }
-
-
-
 
     .centerImg {
         width: 100%;

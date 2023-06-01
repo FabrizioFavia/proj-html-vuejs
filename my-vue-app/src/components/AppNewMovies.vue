@@ -129,7 +129,7 @@ export default {
                 height: 100%;
                 object-fit: cover;
                 border-radius: 20px;
-                filter: saturate(60%);
+                filter: brightness(50%);
             }
 
         }
@@ -147,7 +147,7 @@ export default {
                 height: 100%;
                 object-fit: cover;
                 border-radius: 20px;
-                filter: saturate(60%);
+                filter: brightness(50%);
 
             }
         }
