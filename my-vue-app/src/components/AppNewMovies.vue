@@ -47,7 +47,7 @@ export default {
                     <img class="sideImg" v-show="i == currentCard" :src="movie.xlUrlPath" alt="">
                     <div v-show="i == currentCard" class="cardDscrpt text-white">
                         <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
-                        <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
+                        <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
                         <div class="tags d-flex justify-content-between">
                             <div class="left">Details</div>
                             <div class="right">{{ movie.views }} Views</div>
@@ -61,7 +61,7 @@ export default {
                     <img class="centerImg" v-show="i == currentCard + 1" :src="movie.xlUrlPath" alt="">
                     <div v-show="i == currentCard + 1" class="cardDscrpt text-white">
                         <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
-                        <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
+                        <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
                         <div class="tags d-flex justify-content-between">
                             <div class="left">Details</div>
                             <div class="right">{{ movie.views }} Views</div>
@@ -75,7 +75,7 @@ export default {
                     <img class="sideImg" v-show="i == currentCard + 2" :src="movie.xlUrlPath" alt="">
                     <div v-show="i == currentCard + 2" class="cardDscrpt text-white">
                         <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
-                        <p class="ps-4 mt-3">Category: {{ movie.category }}</p>
+                        <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
                         <div class="tags d-flex justify-content-between">
                             <div class="left">Details</div>
                             <div class="right">{{ movie.views }} Views</div>
