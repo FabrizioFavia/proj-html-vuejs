@@ -68,8 +68,8 @@ export default {
                                 <p class="fs-5">{{ movie.title }}</p>
                                 <small>{{ movie.views }} views</small>
                                 <div class="movieTime d-flex justify-content-between">
-                                    <p>data</p>
-                                    <p>durata</p>
+                                    <p>{{ movie.date }}</p>
+                                    <p>{{ movie.time }}</p>
                                 </div>
                             </div>
                             <div></div>

@@ -84,7 +84,9 @@ export default {
         padding: 0.5em 1em;
 
         &:hover {
-            background-color: green;
+            background-color: white;
+            color: black !important;
+            ;
         }
     }
 }

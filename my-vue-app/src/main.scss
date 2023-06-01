@@ -1,13 +1,20 @@
 $primaryColor: #182028;
 $secondaryColor: #FFFFFF;
 $tertiaryColor: #060F19;
-$accentColor: #13BE13;
+$accentColor: #2CA6A4;
 $borderColor: #292828;
+
+$bgFacebook: #0266e8;
+$bgTwitter: #02b0e8;
+$bgInsta: #c22e2a;
+$bgPinterest: #b00a1b;
+$bgLinkedin: #00a098;
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style-type: none;
 }
 
 .clickable {

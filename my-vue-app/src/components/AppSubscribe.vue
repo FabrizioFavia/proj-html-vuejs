@@ -35,7 +35,7 @@ export default {
 .subscribe {
     margin-top: 100px;
     width: 98%;
-    height: 400px;
+    height: 475px;
     position: relative;
     color: white;
 
@@ -45,7 +45,7 @@ export default {
 
 
         input {
-            background-color: $accentColor;
+            background-color: #13be13;
             border: 1px solid white;
             padding: 12px 20px;
             border-radius: 25px;
@@ -71,6 +71,11 @@ export default {
             border: 0;
             color: white;
             font-size: 12px;
+
+            &:hover {
+                background-color: white;
+                color: black;
+            }
         }
     }
 }

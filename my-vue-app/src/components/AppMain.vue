@@ -23,8 +23,6 @@ export default {
 
 <template>
     <main>
-
-
         <AppJumbo />
         <AppNewMovies />
         <AppMoviePlaylist />
@@ -32,8 +30,6 @@ export default {
         <AppFilterSection />
         <AppLatestNews />
         <AppSubscribe />
-
-        <h2>fine main</h2>
     </main>
 </template>
 

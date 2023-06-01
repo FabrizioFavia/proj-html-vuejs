@@ -20,10 +20,10 @@ export default {
         <i class="fa-regular fa-envelope text-white me-1 fs-5"></i>
         <span class="me-2 text-white">Superhit Top Movie</span>
         <span class="navText">** King Star **</span>
-        <i class="fa-brands fa-facebook-f ms-4"></i>
-        <i class="fa-brands fa-twitter ms-3"></i>
-        <i class="fa-brands fa-linkedin-in ms-3"></i>
-        <i class="fa-brands fa-instagram ms-3"></i>
+        <i class="fa-brands facebook fa-facebook-f ms-4"></i>
+        <i class="fa-brands twitter fa-twitter ms-3"></i>
+        <i class="fa-brands linkedin fa-linkedin-in ms-3"></i>
+        <i class="fa-brands insta fa-instagram ms-3"></i>
         <i class="fa-brands fa-google-plus-g ms-3"></i>
       </div>
       <div class="d-flex align-items-center">
@@ -51,20 +51,20 @@ export default {
     color: $accentColor;
   }
 
-  .fa-facebook-f {
-    color: #3b5998;
+  .facebook {
+    color: $bgFacebook;
   }
 
-  .fa-twitter {
-    color: #00acee;
+  .twitter {
+    color: $bgTwitter;
   }
 
-  .fa-linkedin-in {
-    color: #0c658f;
+  .linkedin {
+    color: $bgLinkedin;
   }
 
-  .fa-instagram {
-    color: #6d1922;
+  .insta {
+    color: $bgInsta;
   }
 
   .fa-google-plus-g {
