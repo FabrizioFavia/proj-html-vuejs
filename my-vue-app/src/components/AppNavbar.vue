@@ -59,7 +59,6 @@ export default {
     }
 
     ul {
-        list-style-type: none;
         background-color: $tertiaryColor;
 
         a {

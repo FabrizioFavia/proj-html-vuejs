@@ -26,10 +26,11 @@ export default {
 
     <div class="container-lg latestContainer d-flex justify-content-between align-items-center">
 
-        <!-- BIG SQUARE -->
+
         <div class="latestMovies d-flex justify-content-between">
             <template v-for="(movie, i) in store.movies">
-                <div v-if="i == 0 && movie.category.includes(`Latest Movie`)" class="square h-100">
+                <!-- BIG SQUARE -->
+                <div v-if="i == 0 && movie.category.includes(`Latest Movie`)" class="square bigSquare h-100">
                     <img :src="movie.xlUrlPath" alt="">
                     <div class="cardDscrpt text-white">
                         <h3 class="ps-4 mt-3 mb-3">{{ movie.title }}</h3>
@@ -39,6 +40,8 @@ export default {
                             <div class="right clickable">0 comments Share</div>
                         </div>
                     </div>
+                    <div class="cardHover position-absolute top-0 w-100 h-100">
+                    </div>
                 </div>
             </template>
 
@@ -47,13 +50,20 @@ export default {
                 <template v-for="(movie, i) in store.movies">
                     <div v-if="i > 0 && movie.category.includes(`Latest Movie`)" class="smallSquare">
                         <img :src="movie.xlUrlPath" alt="">
-                        <div class="cardDscrpt text-white">
-                            <h3 class="ps-4 mt-3 fs-5">{{ movie.title }}</h3>
-
-                            <div class="tags d-flex justify-content-between">
-                                <div class="left clickable">Details</div>
-                                <div class="right clickable">Share</div>
+                        <div class="cardDscrpt text-white h-100 d-flex flex-column justify-content-between">
+                            <div class="tag d-flex justify-content-end align-items-center mt-3">
+                                <small class="right clickable me-2">{{ movie.date }}</small>
                             </div>
+                            <div class="info">
+                                <h3 class="ps-4 mt-3 fs-5">{{ movie.title }}</h3>
+
+                                <div class="tags d-flex justify-content-between">
+                                    <div class="left clickable">Details</div>
+                                    <div class="right clickable">Share</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cardHover position-absolute top-0 w-100 h-100">
                         </div>
                     </div>
                 </template>
@@ -113,11 +123,13 @@ export default {
                     background-color: $primaryColor;
                     border-top-right-radius: 20px;
                     border-bottom-right-radius: 20px;
+                    z-index: 2;
                 }
 
                 .right {
                     border-top-left-radius: 20px;
                     border-bottom-left-radius: 20px;
+                    z-index: 2;
                 }
             }
 
@@ -157,6 +169,35 @@ export default {
                     }
                 }
             }
+        }
+
+        .cardHover {
+            background: rgb(255, 255, 255);
+            background: linear-gradient(0deg, rgba(255, 255, 255, 1) 15%, rgba(44, 166, 164, 1) 89%);
+            opacity: 30%;
+            visibility: hidden;
+        }
+
+        .tag {
+            visibility: hidden;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            background-color: $accentColor;
+            margin-left: 180px;
+            height: 40px;
+
+        }
+
+        .bigSquare:hover .cardHover {
+            visibility: visible;
+        }
+
+        .smallSquare:hover .cardHover {
+            visibility: visible;
+        }
+
+        .smallSquare:hover .tag {
+            visibility: visible;
         }
     }
 }

@@ -28,19 +28,19 @@ export default {
 
                         <div class="logoContainer text-white d-flex">
                             <div class="logoCircle facebook d-flex justify-content-center align-items-center">
-                                <i class="fa-brands fa-facebook-f"></i>
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                             </div>
                             <div class="logoCircle twitter d-flex justify-content-center align-items-center">
-                                <i class="fa-brands fa-twitter"></i>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
                             </div>
                             <div class="logoCircle linkedin d-flex justify-content-center align-items-center">
-                                <i class="fa-brands fa-linkedin-in"></i>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
                             </div>
                             <div class="logoCircle insta d-flex justify-content-center align-items-center">
-                                <i class="fa-brands fa-instagram"></i>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
                             </div>
                             <div class="logoCircle pinterest d-flex justify-content-center align-items-center">
-                                <i class="fa-brands fa-pinterest"></i>
+                                <a href="#"><i class="fa-brands fa-pinterest"></i></a>
                             </div>
                         </div>
                     </div>
@@ -49,12 +49,24 @@ export default {
                         <div class="title text-white fw-bold fs-5">Movie Category</div>
                         <div class="line"></div>
                         <ul>
-                            <li>English New Movie</li>
-                            <li>Hindi All Movie</li>
-                            <li>Latest Tamil Movie</li>
-                            <li>New Top Rating Movie</li>
-                            <li>Horn New Movie</li>
-                            <li>Animation New Movie</li>
+                            <a href="#">
+                                <li>Hindi All Movie</li>
+                            </a>
+                            <a href="#">
+                                <li>English New Movie</li>
+                            </a>
+                            <a href="#">
+                                <li>Latest Tamil Movie</li>
+                            </a>
+                            <a href="#">
+                                <li>New Top Rating Movie</li>
+                            </a>
+                            <a href="#">
+                                <li>Horn New Movie</li>
+                            </a>
+                            <a href="#">
+                                <li>Animation New Movie</li>
+                            </a>
                         </ul>
                     </div>
 
@@ -62,12 +74,24 @@ export default {
                         <div class="title text-white fw-bold fs-5">Information</div>
                         <div class="line"></div>
                         <ul>
-                            <li>Youtube Video Post</li>
-                            <li>Actor Information</li>
-                            <li>New Promotion</li>
-                            <li>Latest Movie in English</li>
-                            <li>Latest Film Product</li>
-                            <li>New Videos</li>
+                            <a href="#">
+                                <li>Youtube Video Post</li>
+                            </a>
+                            <a href="#">
+                                <li>Actor Information</li>
+                            </a>
+                            <a href="#">
+                                <li>New Promotion</li>
+                            </a>
+                            <a href="#">
+                                <li>Latest Movie in English</li>
+                            </a>
+                            <a href="#">
+                                <li>Latest Film Product</li>
+                            </a>
+                            <a href="#">
+                                <li>New Videos</li>
+                            </a>
                         </ul>
                     </div>
 
@@ -75,17 +99,19 @@ export default {
                         <div class="title text-white fw-bold fs-5">Recent Posts</div>
                         <div class="line"></div>
                         <template v-for="(movie, i) in store.movies">
-                            <div v-if="i <= 2" class="movieLine d-flex mt-4 text-white">
-                                <div class="movieCover">
-                                    <img :src="movie.smUrlPath" alt="">
-                                </div>
-                                <div class="movieDscrpt pe-3 w-100">
-                                    <p class="fs-6">{{ movie.title }}</p>
-                                    <div class="movieTime d-flex justify-content-between">
-                                        <p>{{ movie.date }}</p>
+                            <a href="">
+                                <div v-if="i <= 2" class="movieLine d-flex mt-4 text-white">
+                                    <div class="movieCover">
+                                        <img :src="movie.smUrlPath" alt="">
+                                    </div>
+                                    <div class="movieDscrpt pe-3 w-100">
+                                        <p class="fs-6">{{ movie.title }}</p>
+                                        <div class="movieTime d-flex justify-content-between">
+                                            <p>{{ movie.date }}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </template>
                     </div>
                 </div>
@@ -116,6 +142,10 @@ export default {
 footer {
     height: 500px;
     position: relative;
+
+    a {
+        text-decoration: none;
+    }
 
     .footerImg {
         height: 100%;
@@ -155,6 +185,11 @@ footer {
                 height: 38px;
                 border-radius: 50%;
                 margin-right: 10px;
+
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
 
                 &:hover {
                     background-color: $tertiaryColor;

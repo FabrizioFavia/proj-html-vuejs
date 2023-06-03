@@ -45,12 +45,19 @@ export default {
             <div class="sideMovieCard col-4">
                 <template v-for="(movie, i) in store.movies">
                     <img class="sideImg" v-show="i == currentCard" :src="movie.xlUrlPath" alt="">
-                    <div v-show="i == currentCard" class="cardDscrpt text-white">
-                        <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
-                        <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
-                        <div class="tags d-flex justify-content-between">
-                            <div class="left">Details</div>
-                            <div class="right">{{ movie.views }} Views</div>
+                    <div v-show="i == currentCard"
+                        class="cardDscrpt d-flex flex-column justify-content-between h-100 text-white">
+                        <div class="movieRate d-flex align-items-center justify-content-end pt-4 pe-4">
+                            <i v-show="i == currentCard" class="fa fa-star me-1"></i>
+                            <p v-show="i == currentCard">{{ movie.rate }}/10</p>
+                        </div>
+                        <div v-show="i == currentCard">
+                            <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
+                            <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
+                            <div class="tags d-flex justify-content-between">
+                                <div class="left">Details</div>
+                                <div class="right">{{ movie.views }} Views</div>
+                            </div>
                         </div>
                     </div>
                 </template>
@@ -59,12 +66,19 @@ export default {
             <div class="movieCard col-4">
                 <template v-for="(movie, i) in store.movies">
                     <img class="centerImg" v-show="i == currentCard + 1" :src="movie.xlUrlPath" alt="">
-                    <div v-show="i == currentCard + 1" class="cardDscrpt text-white">
-                        <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
-                        <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
-                        <div class="tags d-flex justify-content-between">
-                            <div class="left">Details</div>
-                            <div class="right">{{ movie.views }} Views</div>
+                    <div v-show="i == currentCard + 1"
+                        class="cardDscrpt d-flex flex-column justify-content-between h-100 text-white">
+                        <div class="movieRate d-flex align-items-center justify-content-end pt-4 pe-4">
+                            <i v-show="i == currentCard + 1" class="fa fa-star me-1"></i>
+                            <p v-show="i == currentCard + 1">{{ movie.rate }}/10</p>
+                        </div>
+                        <div v-show="i == currentCard + 1">
+                            <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
+                            <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
+                            <div class="tags d-flex justify-content-between">
+                                <div class="left">Details</div>
+                                <div class="right">{{ movie.views }} Views</div>
+                            </div>
                         </div>
                     </div>
                 </template>
@@ -73,12 +87,19 @@ export default {
             <div class="sideMovieCard col-4">
                 <template v-for="(movie, i) in store.movies">
                     <img class="sideImg" v-show="i == currentCard + 2" :src="movie.xlUrlPath" alt="">
-                    <div v-show="i == currentCard + 2" class="cardDscrpt text-white">
-                        <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
-                        <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
-                        <div class="tags d-flex justify-content-between">
-                            <div class="left">Details</div>
-                            <div class="right">{{ movie.views }} Views</div>
+                    <div v-show="i == currentCard + 2"
+                        class="cardDscrpt d-flex flex-column justify-content-between h-100 text-white">
+                        <div class="movieRate d-flex align-items-center justify-content-end pt-4 pe-4">
+                            <i v-show="i == currentCard + 2" class="fa fa-star me-1"></i>
+                            <p v-show="i == currentCard + 2">{{ movie.rate }}/10</p>
+                        </div>
+                        <div v-show="i == currentCard + 2">
+                            <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
+                            <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
+                            <div class="tags d-flex justify-content-between">
+                                <div class="left">Details</div>
+                                <div class="right">{{ movie.views }} Views</div>
+                            </div>
                         </div>
                     </div>
                 </template>
@@ -158,6 +179,20 @@ export default {
         bottom: 0;
         width: 100%;
         font-weight: 600;
+
+        .movieRate {
+
+            font-size: 14px;
+
+            p {
+                font-weight: 300;
+            }
+
+            i {
+                color: $accentColor;
+            }
+        }
+
     }
 
     .tags {
