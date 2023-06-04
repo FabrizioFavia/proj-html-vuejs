@@ -6,6 +6,19 @@ export const store = reactive({
 
     filter: null,
     currentSlide: 0,
+    logged: false,
+
+    user: {
+        username: "",
+        password: "",
+    },
+
+    users: [
+        {
+            username: "Fabrizio",
+            password: "prova"
+        }
+    ],
 
     movies: [
         {
@@ -136,7 +149,7 @@ export const store = reactive({
             link: null,
             subMenu: [
                 {
-                    label: "lorem 1",
+                    label: "Area utente",
                     link: "#",
                     disable: true,
                 },
@@ -146,7 +159,7 @@ export const store = reactive({
                     disable: false,
                 },
                 {
-                    label: "lorem 3",
+                    label: "Acquisti",
                     link: "#",
                     disable: true,
                 },

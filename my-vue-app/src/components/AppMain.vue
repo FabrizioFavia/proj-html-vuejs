@@ -7,6 +7,7 @@ import AppLatestNews from './AppLatestNews.vue'
 import AppSubscribe from './AppSubscribe.vue'
 import AppFixedJumbo from './AppFixedJumbo.vue'
 
+
 export default {
     name: "AppMain",
     components: {
@@ -16,7 +17,7 @@ export default {
         AppFixedJumbo,
         AppFilterSection,
         AppLatestNews,
-        AppSubscribe
+        AppSubscribe,
     }
 }
 </script>
@@ -36,9 +37,6 @@ export default {
 <style lang="scss" scoped>
 @use "../main.scss" as *;
 
-h2 {
-    color: $secondaryColor;
-}
 
 main {
     background-color: $tertiaryColor;

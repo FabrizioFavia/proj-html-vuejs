@@ -1,13 +1,15 @@
 <script>
 
-import { store } from '../store'
+import { store } from '../store';
+import AppTopArrow from './AppTopArrow.vue';
 
 export default {
     name: "AppJumbo",
 
     data() {
         return {
-            store
+            store,
+            AppTopArrow
         }
     },
     methods: {
@@ -29,7 +31,7 @@ export default {
 </script>
 
 <template>
-    <div class="JumboContainer d-flex align-items-center justify-content-center">
+    <div @scroll="scrollFunction()" class="JumboContainer d-flex align-items-center justify-content-center">
         <template v-for="(slide, i) in store.slides">
             <img class="slide" v-show="i == store.currentSlide" :src="slide.urlPath" alt="">
         </template>

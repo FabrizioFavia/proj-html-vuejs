@@ -1,20 +1,25 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
-import AppMain from './components/AppMain.vue';
+import AppMain from './components/AppMain.vue'
 import AppFooter from './components/AppFooter.vue'
-
+import AppTopArrow from './components/AppTopArrow.vue'
+import AppOffCanva from './components/AppOffcanva.vue'
 
 
 export default {
   components: {
+    AppTopArrow,
     AppHeader,
     AppMain,
     AppFooter,
+    AppOffCanva
   }
 }
 </script>
 
 <template>
+  <AppOffCanva />
+  <AppTopArrow />
   <AppHeader />
   <AppMain />
   <AppFooter />
@@ -22,4 +27,6 @@ export default {
 
 
 
-<style></style>
+<style lang="scss" scoped>
+@use "./main.scss" as *;
+</style>
