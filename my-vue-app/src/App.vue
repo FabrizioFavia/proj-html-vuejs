@@ -8,11 +8,11 @@ import AppOffCanva from './components/AppOffcanva.vue'
 
 export default {
   components: {
+    AppOffCanva,
     AppTopArrow,
     AppHeader,
     AppMain,
     AppFooter,
-    AppOffCanva
   }
 }
 </script>

@@ -11,15 +11,44 @@ export default {
     },
     methods: {
         nextCard() {
-            if (this.currentCard <= this.store.movies.length - 4) {
-                this.currentCard++;
+            if (this.currentCard < this.store.movies.length - 1) {
+                this.currentCard += 1;
+            } else {
+                this.currentCard = 0;
             }
+
         },
         previousCard() {
             if (this.currentCard > 0) {
                 this.currentCard--;
+            } else {
+                this.currentCard = this.store.movies.length - 1
             }
         },
+        showPre(i) {
+
+            if ((this.currentCard == 0) && (i == this.store.movies.length - 1)) {
+                return true
+            }
+
+            if ((this.currentCard > 0) && (i == this.currentCard - 1)) {
+                return true
+            }
+            return false
+
+
+
+        },
+
+        showLast(i) {
+            if ((this.currentCard < this.store.movies.length - 1) && (this.currentCard + 1 == i)) {
+                return true
+            }
+            if ((this.currentCard >= this.store.movies.length - 1) && (0 == i)) {
+                return true
+            }
+            return false
+        }
     }
 }
 </script>
@@ -33,8 +62,8 @@ export default {
                 <p>Discover our new horror movies, if you dare. </p>
             </div>
             <div class=" col-1 d-flex align-items-center btnContainer">
-                <i @click="previousCard()" class="fa-solid fa-circle-chevron-right reversed"></i>
-                <i @click="nextCard()" class="fa-solid fa-circle-chevron-right"></i>
+                <i @click="previousCard()" class="fa-solid fa-circle-chevron-right reversed clickable"></i>
+                <i @click="nextCard()" class="fa-solid fa-circle-chevron-right clickable"></i>
             </div>
         </div>
     </div>
@@ -44,14 +73,13 @@ export default {
 
             <div class="sideMovieCard col-4">
                 <template v-for="(movie, i) in store.movies">
-                    <img class="sideImg" v-show="i == currentCard" :src="movie.xlUrlPath" alt="">
-                    <div v-show="i == currentCard"
-                        class="cardDscrpt d-flex flex-column justify-content-between h-100 text-white">
+                    <img class="sideImg" v-show="showPre(i)" :src="movie.xlUrlPath" alt="">
+                    <div v-show="showPre(i)" class="cardDscrpt d-flex flex-column justify-content-between h-100 text-white">
                         <div class="movieRate d-flex align-items-center justify-content-end pt-4 pe-4">
-                            <i v-show="i == currentCard" class="fa fa-star me-1"></i>
-                            <p v-show="i == currentCard">{{ movie.rate }}/10</p>
+                            <i v-show="showPre(i)" class="fa fa-star me-1"></i>
+                            <p v-show="showPre(i)">{{ movie.rate }}/10</p>
                         </div>
-                        <div v-show="i == currentCard">
+                        <div v-show="showPre(i)">
                             <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
                             <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
                             <div class="tags d-flex justify-content-between">
@@ -65,14 +93,14 @@ export default {
 
             <div class="movieCard col-4">
                 <template v-for="(movie, i) in store.movies">
-                    <img class="centerImg" v-show="i == currentCard + 1" :src="movie.xlUrlPath" alt="">
-                    <div v-show="i == currentCard + 1"
+                    <img class="centerImg" v-show="currentCard == i" :src="movie.xlUrlPath" alt="">
+                    <div v-show="currentCard == i"
                         class="cardDscrpt d-flex flex-column justify-content-between h-100 text-white">
                         <div class="movieRate d-flex align-items-center justify-content-end pt-4 pe-4">
-                            <i v-show="i == currentCard + 1" class="fa fa-star me-1"></i>
-                            <p v-show="i == currentCard + 1">{{ movie.rate }}/10</p>
+                            <i v-show="currentCard == i" class="fa fa-star me-1"></i>
+                            <p v-show="currentCard == i">{{ movie.rate }}/10</p>
                         </div>
-                        <div v-show="i == currentCard + 1">
+                        <div v-show="currentCard == i">
                             <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
                             <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
                             <div class="tags d-flex justify-content-between">
@@ -86,14 +114,14 @@ export default {
 
             <div class="sideMovieCard col-4">
                 <template v-for="(movie, i) in store.movies">
-                    <img class="sideImg" v-show="i == currentCard + 2" :src="movie.xlUrlPath" alt="">
-                    <div v-show="i == currentCard + 2"
+                    <img class="sideImg" v-show="showLast(i)" :src="movie.xlUrlPath" alt="">
+                    <div v-show="showLast(i)"
                         class="cardDscrpt d-flex flex-column justify-content-between h-100 text-white">
                         <div class="movieRate d-flex align-items-center justify-content-end pt-4 pe-4">
-                            <i v-show="i == currentCard + 2" class="fa fa-star me-1"></i>
-                            <p v-show="i == currentCard + 2">{{ movie.rate }}/10</p>
+                            <i v-show="showLast(i)" class="fa fa-star me-1"></i>
+                            <p v-show="showLast(i)">{{ movie.rate }}/10</p>
                         </div>
-                        <div v-show="i == currentCard + 2">
+                        <div v-show="showLast(i)">
                             <h3 class="ps-4 mt-3">{{ movie.title }}</h3>
                             <p class="ps-4 mt-3">Category: {{ movie.category.toString() }}</p>
                             <div class="tags d-flex justify-content-between">
@@ -127,7 +155,7 @@ export default {
             font-size: 35px;
 
             .reversed {
-                transform: rotate(180deg);
+                transform: rotateY(180deg);
                 margin-right: 10px;
             }
         }

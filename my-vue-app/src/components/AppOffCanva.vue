@@ -12,20 +12,27 @@ export default {
     methods: {
         logIn() {
 
+            if (store.user.username && store.user.password) {
+                let result = store.users.filter(element => element.username == store.user.username && element.password == store.user.password);
+                if (result.length) {
+                    store.logged = true;
 
-            if (store.user.username.length !== null && store.user.username == store.users[0].username && store.user.password !== null && store.user.password == store.users[0].password) {
-                console.log("l'utente è registrato");
-                store.logged = true;
-
-                store.navItems.forEach(item => {
-                    item.subMenu.forEach(item => {
-                        item.disable = false;
+                    store.navItems.forEach(item => {
+                        item.subMenu.forEach(item => {
+                            item.disable = false;
+                        });
                     });
-                });
+
+                    console.log("L'utente è registrato");
+                } else {
+                    alert("username o paswword sbagliati");
+                }
 
             } else {
-                console.log("utente non trovato")
+                alert("Riempi i campi richiesti");
             }
+
+
 
         }
     }

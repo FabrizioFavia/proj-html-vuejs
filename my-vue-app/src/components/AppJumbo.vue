@@ -31,7 +31,7 @@ export default {
 </script>
 
 <template>
-    <div @scroll="scrollFunction()" class="JumboContainer d-flex align-items-center justify-content-center">
+    <div class="JumboContainer d-flex align-items-center justify-content-center">
         <template v-for="(slide, i) in store.slides">
             <img class="slide" v-show="i == store.currentSlide" :src="slide.urlPath" alt="">
         </template>

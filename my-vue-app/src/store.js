@@ -152,6 +152,7 @@ export const store = reactive({
                     label: "Area utente",
                     link: "#",
                     disable: true,
+
                 },
                 {
                     label: "lorem 2",

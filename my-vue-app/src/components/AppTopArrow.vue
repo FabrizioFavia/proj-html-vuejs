@@ -8,7 +8,7 @@ export default {
 </script>
 
 <template>
-    <a href="#"><button class="target v-motion-slide-visible-one-right"><i class="fa-solid fa-chevron-up"></i></button></a>
+    <a href="#"><button><i class="fa-solid fa-chevron-up"></i></button></a>
 </template>
 
 
