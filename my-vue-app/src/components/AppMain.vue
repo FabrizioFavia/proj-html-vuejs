@@ -18,7 +18,7 @@ export default {
         AppFilterSection,
         AppLatestNews,
         AppSubscribe,
-    }
+    },
 }
 </script>
 
